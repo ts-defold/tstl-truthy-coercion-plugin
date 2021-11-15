@@ -35,22 +35,6 @@ test("falsy number logical and", () => {
 	`.expectToMatchJsResult();
 });
 
-test("falsy", () => {
-	util.testFunction`
-		const results = [];
-
-		if (false) results.push(1);
-		if (null) results.push(2);
-		if (undefined) results.push(3);
-		if (0) results.push(4);
-		if (-0) results.push(5);
-		if (NaN) results.push(6);
-		if ("") results.push(7);
-
-		return results;
-	`.expectToMatchJsResult();
-});
-
 test("truthy", () => {
 	util.testFunction`
 		const results = [];
@@ -69,4 +53,28 @@ test("truthy", () => {
 
 		return results;
 	`.expectToMatchJsResult();
+});
+
+test("falsy", () => {
+	util.testFunction`
+		const results = [];
+
+		if (false) results.push(1);
+		if (null) results.push(2);
+		if (undefined) results.push(3);
+		if (0) results.push(4);
+		if (-0) results.push(5);
+		if (NaN) results.push(6);
+		if ("") results.push(7);
+
+		return results;
+	`.expectToMatchJsResult();
+});
+
+test("conditional", () => {
+	util.testFunction`
+		return "" ? true : false;
+	`
+	.expectLuaToMatchSnapshot()
+	.expectToMatchJsResult();
 });
