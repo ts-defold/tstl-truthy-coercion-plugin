@@ -7,16 +7,13 @@ test("truthy strings", () => {
 			return true;
 		}
 		else return false;
-	`
-	.expectToMatchJsResult();
+	`.expectToMatchJsResult();
 });
 
 test("falsy string logical and", () => {
 	util.testFunction`
 		return "" || "dog";
-	`
-	.expectLuaToMatchSnapshot()
-	.expectToMatchJsResult();
+	`.expectToMatchJsResult();
 });
 
 test("truthy numbers", () => {
@@ -29,16 +26,13 @@ test("truthy numbers", () => {
 		if (bar) { results.push(true); } else { results.push(false); }
 
 		return results;
-	`
-	.expectToMatchJsResult();
+	`.expectToMatchJsResult();
 });
 
 test("falsy number logical and", () => {
 	util.testFunction`
 		return 0 || 100;
-	`
-	.expectLuaToMatchSnapshot()
-	.expectToMatchJsResult();
+	`.expectToMatchJsResult();
 });
 
 test("falsy", () => {
@@ -54,8 +48,7 @@ test("falsy", () => {
 		if ("") results.push(7);
 
 		return results;
-	`
-	.expectToMatchJsResult();
+	`.expectToMatchJsResult();
 });
 
 test("truthy", () => {
@@ -75,6 +68,5 @@ test("truthy", () => {
 		if (-Infinity) results.push(11);
 
 		return results;
-	`
-	.expectToMatchJsResult();
+	`.expectToMatchJsResult();
 });
