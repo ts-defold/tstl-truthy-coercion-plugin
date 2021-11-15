@@ -1,0 +1,53 @@
+{
+  "name": "tstl-truthy-coercion",
+  "version": "1.0.0",
+  "description": "TypeScriptToLua plugin that emulates JS truthyness in boolean contexts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ts-defold/tstl-truthy-coercion.git"
+  },
+  "keywords": [
+    "typescript",
+    "lua",
+    "defold"
+  ],
+  "author": "Justin Walsh (@thejustinwalsh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ts-defold/tstl-truthy-coercion/issues"
+  },
+  "homepage": "https://github.com/ts-defold/tstl-truthy-coercion#readme",
+  "engines": {
+    "node": ">=12.13.0"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist/**/*.js"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "pretest": "npm run build"
+  },
+  "peerDependencies": {
+    "typescript": "~4.3.5",
+    "typescript-to-lua": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.14",
+    "@typescript-eslint/eslint-plugin": "^4.4.0",
+    "@typescript-eslint/parser": "^4.4.0",
+    "eslint": "^7.10.0",
+    "is-ci": "^3.0.1",
+    "javascript-stringify": "^2.1.0",
+    "jest": "^27.3.0",
+    "jest-circus": "^27.3.0",
+    "lua-types": "2.10.1",
+    "lua-wasm-bindings": "^0.2.2",
+    "prettier": "^2.3.2",
+    "ts-jest": "^27.0.7",
+    "ts-node": "^9.0.0",
+    "typescript": "~4.3.5",
+    "typescript-to-lua": "^1.0.0"
+  }
+}
