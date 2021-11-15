@@ -1,7 +1,7 @@
 {
   "name": "tstl-truthy-coercion",
   "version": "1.0.0",
-  "description": "TypeScriptToLua plugin that emulates JS truthyness in boolean contexts",
+  "description": "TypeScriptToLua plugin that emulates JS truthiness in boolean contexts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ts-defold/tstl-truthy-coercion.git"
